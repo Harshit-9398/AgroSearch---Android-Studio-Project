@@ -25,7 +25,7 @@
         app:layout_constraintTop_toBottomOf="@+id/formLogo2">
 
         <AutoCompleteTextView
-            android:id="@+id/userNumber"
+            android:id="@+id/userEmail"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginStart="15dp"
@@ -35,12 +35,12 @@
             android:background="@drawable/rounded_white"
             android:drawableStart="@mipmap/ic_user_icon"
             android:drawablePadding="5dp"
-            android:hint="Phone"
-            android:inputType="number"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
             android:paddingStart="10dp"
             android:textSize="14sp" />
 
-        <AutoCompleteTextView
+        <EditText
             android:id="@+id/userPassword"
             android:layout_width="match_parent"
             android:layout_height="40dp"
@@ -67,19 +67,6 @@
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:text="Login"
-            android:textColor="#ffffff"
-            android:textStyle="normal" />
-
-        <Button
-            android:id="@+id/BForgotPassword"
-            android:layout_width="190dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="50dp"
-            android:background="#010101"
-            android:padding="20dp"
-            android:text="FORGOT PASSWORD"
             android:textColor="#ffffff"
             android:textStyle="normal" />
 

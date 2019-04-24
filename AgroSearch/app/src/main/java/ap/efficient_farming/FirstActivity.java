@@ -1,14 +1,12 @@
 package ap.efficient_farming;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
 
-import java.util.ArrayList;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class FirstActivity extends AppCompatActivity {
 
@@ -26,6 +24,11 @@ public class FirstActivity extends AppCompatActivity {
         setContentView(R.layout.activity_first);
         LButton = (Button) findViewById(R.id.LButton);
         RButton = (Button) findViewById(R.id.RButton);
+        if(FirebaseAuth.getInstance().getCurrentUser() != null){
+            finish();
+
+            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+        }
         LButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
